@@ -2,10 +2,6 @@ const app = require('express')();
 const http = require('http').Server(app);
 const io = require('socket.io')(http);
 
-app.get('/', function(req, res){
-  res.sendfile('index.html');
-});
-
 io.on('connection', function(socket){
   console.log('An user connected to the server');
 });
@@ -14,6 +10,7 @@ var fazenda1=0;
 var fazenda2=0;
 var fazenda3=0;
 const multiplier=10;
+
 setInterval(() => {
   var num=  Math.random()
   num=num*multiplier;

@@ -104,7 +104,6 @@ export default class App extends React.Component {
     
     return (
       <View style={styles.container}>
-        {/* <Text>connected: {this.state.isConnected ? 'true' : 'false'}</Text> */}
         <View style={styles.farmItem}>
           <Text>FAZENDA 1</Text>
           <View style={styles.farmList}>

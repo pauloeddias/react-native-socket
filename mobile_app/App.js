@@ -2,6 +2,8 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 const io = require('socket.io-client');
 
+const IP_SERVIDOR='192.168.0.169:3000'
+
 pad = function(number) {
   var s = String(number);
   if(s.length==1){
@@ -35,7 +37,7 @@ export default class App extends React.Component {
   };
   componentDidMount() {
     
-    const socket = io('http://192.168.0.169:3000', {
+    const socket = io('http://'+IP_SERVIDOR, {
       transports: ['websocket'],
     });
 

@@ -19,7 +19,7 @@ setInterval(() => {
   num=num*multiplier;
   fazenda1=fazenda1+num;
   var date = new Date()
-  io.emit('fazenda1', { data: fazenda1, time:date.getTime()});
+  io.emit('fazenda1', { data: Math.round(fazenda1), time:date.getTime()});
 }, 5000);
 
 setInterval(() => {
@@ -27,7 +27,7 @@ setInterval(() => {
     num=num*multiplier;
     fazenda2=fazenda2+num;
     var date = new Date()
-    io.emit('fazenda2', { data: fazenda2, time:date.getTime()});
+    io.emit('fazenda2', { data: Math.round(fazenda2), time:date.getTime()});
   }, 5000);
 
 setInterval(() => {
@@ -35,7 +35,7 @@ setInterval(() => {
     num=num*multiplier;
     fazenda3=fazenda3+num;
     var date = new Date()
-    io.emit('fazenda3', { data: fazenda3, time:date.getTime()});
+    io.emit('fazenda3', { data: Math.round(fazenda3), time:date.getTime()});
 }, 5000);
 
 http.listen(3000, function(){

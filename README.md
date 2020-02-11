@@ -1,5 +1,3 @@
-desafio_4milk
-
 O BACKEND DEVE ESTAR RODANDO ANTES DE EXECUTAR O APLICATIVO
 
 Para rodar o backend, entre na pasta e execute:
